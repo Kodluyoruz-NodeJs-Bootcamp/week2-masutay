@@ -21,8 +21,8 @@ export const register = async (req, res) => {
       const salt = await bcrypt.genSalt()
       // assign that generated hash to hashPassword
       const hashPassword = await bcrypt.hash(password, salt);
+      
       // create new user 
-
       const user = await userRepository.create({
         firstName,
         lastName,
@@ -82,7 +82,7 @@ export const login = async (req, res) => {
           expiresIn: "5m",
         }
       )
-
+      //create  cookie that name is token
       res.cookie("token", token, { httpOnly: true });
 
       // session cookie
@@ -100,6 +100,7 @@ export const login = async (req, res) => {
 
 }
 
+//get users from Database
 export const allUser = async (req, res, next) => {
 
   const userRepository = getRepository(User);
@@ -108,6 +109,7 @@ export const allUser = async (req, res, next) => {
   res.render("index", { users: users, layout: "./layout/dataTable_layout.ejs" })
 
 }
+
 
 export const showLoginForm = (req, res, next) => {
 

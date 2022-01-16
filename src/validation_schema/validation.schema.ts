@@ -1,10 +1,11 @@
 import { body } from 'express-validator';
 
+// validation for Register
 
 export const validateNewUser = () => {
+
     return [
         body('email')
-
             .trim()
             .isEmail().withMessage('Please insert a valid email address!'),
 
@@ -24,7 +25,20 @@ export const validateNewUser = () => {
 
 }
 
+// validation for Login
 
+export const validateLogin = () => {
+
+    return [
+        body('userName')
+            .trim()
+            .isEmpty().withMessage("cant be empty"),
+        body('password')
+            .trim()
+            .isLength({ min: 6 }).withMessage("Password must be at least 6 characters!!"),
+    ]
+
+}
 
 
 
