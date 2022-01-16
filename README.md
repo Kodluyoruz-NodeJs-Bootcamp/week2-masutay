@@ -26,3 +26,15 @@
 
 # :camera:  Screenshots
 
+## Register Page 
+
+![Screenshot_1](https://user-images.githubusercontent.com/59343235/149677459-6717e196-be0f-4e04-9579-486c14f9d467.png)
+
+## Login Page
+ 
+![Screenshot_2](https://user-images.githubusercontent.com/59343235/149677547-841b3051-ea70-4bdd-87a4-b1a4144a7ec5.png)
+
+## Dashboar Page
+![Screenshot_3](https://user-images.githubusercontent.com/59343235/149677567-da6ba836-bd79-4db0-a8c8-ba0424fa5c45.png)
+
+
